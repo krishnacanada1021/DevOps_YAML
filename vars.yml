@@ -8,7 +8,7 @@
         msg: "{{ URL_PLAY }}"
     - name: Print text again
       debug:
-        msg: "{{ URL_PLAY }}"
+        msg: "{{ URL_TASK }}"
     - name: Print newtext
       vars:
         URL_TASK: "This is my new text."

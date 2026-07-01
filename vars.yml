@@ -1,0 +1,16 @@
+- name: print same text
+  hosts: localhost
+  vars:
+    URL_PLAY: "THIS IS THE SAME TEXT PRINTED MULTIPLE TIMES."
+  tasks:
+    - name: Print text
+      debug:
+        msg: "{{ URL_PLAY }}"
+    - name: Print text again
+      debug:
+        msg: "{{ URL_PLAY }}"
+    - name: Print newtext
+      vars:
+        URL_TASK: "This is my new text."
+      debug:
+        msg: "{{ URL_TASK }}"

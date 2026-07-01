@@ -1,0 +1,9 @@
+- name: print same text
+  hosts: localhost
+  tasks:
+    - name: Print text
+      debug:
+        msg: "This is the same text printed multiple times."
+    - name: Print text again
+      debug:
+        msg: "My name is  krishna chaitanya."

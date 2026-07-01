@@ -1,0 +1,12 @@
+#if/else--Most programmers use if/else statements to control the flow of their programs.
+- name: Demo on conditions
+  hosts: localhost
+  tasks:
+    - name: Vegetables
+      debug:
+        msg: Vegetables are good for health.
+      when: type == "vegetables"
+    - name: Fruits
+      debug:
+        msg: Fruits are good for health.
+      when: type == "fruits"

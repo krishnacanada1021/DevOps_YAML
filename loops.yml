@@ -8,6 +8,16 @@
         - Apple
         - Banana
         - Cherry
+- name: Print Fruits with quantity
+  hosts: localhost
+  tasks:
+    - name: Print Fruits with quantity
+      debug:
+        msg: "Fruit Name - {{ item.name }} and Quantity - {{ item.quantity }}"
+      loop:
+        - { name: Apple, quantity: 10 }
+        - { name: Banana, quantity: 20 }
+        - { name: Cherry, quantity: 30 }
 
 #Iteration of tasks until condition fails
 #loop

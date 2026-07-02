@@ -1,0 +1,25 @@
+- name: print same text
+  hosts: localhost
+  vars:
+    URL_PLAY: "THIS IS THE SAME TEXT PRINTED MULTIPLE TIMES."
+  tasks:
+    - name: Print text
+      debug:
+        msg: "{{ URL_PLAY }}"
+    - name: Print text again
+      debug:
+        msg: "{{ URL_PLAY }}"
+    - name: Print newtext
+      vars:
+        URL_TASK: "This is my new text."
+      debug:
+        msg: "{{ URL_TASK }}"
+- name: Uptime of my machine
+  hosts: localhost
+  tasks:
+    - name: Print uptime of my machine
+      command: uptime
+      register: uptime_output
+    - name: Display uptime output
+      debug:
+        msg: "{{ uptime_output.stdout }}"

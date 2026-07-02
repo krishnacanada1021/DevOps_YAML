@@ -3,9 +3,10 @@
   become: yes
   tasks:
       - name: Install Nginx
-        ansible.builtin.dnf:
-         name: nginx
-         state: latest
+        apt:
+        name: nginx
+        state: present
+        become: yes
     
       - name: Copy Expense Nginx Configuration
         ansible.builtin.copy:

@@ -4,10 +4,14 @@
   tasks:
       - name: Install Nginx
         apt:
-         name: 
-           - nginx
-           - unzip
+         name: nginx
          state: latest
+
+      - name: Install unzip
+        ansible.builtin.apt:
+        name: unzip
+        state: present
+        update_cache: yes
     
       - name: Copy Expense Nginx Configuration
         ansible.builtin.copy:

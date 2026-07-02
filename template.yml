@@ -1,6 +1,6 @@
--name: Demo in template
-hosts: localhost
-tasks:
+- name: Demo in template
+  hosts: localhost
+  tasks:
     - name: copy example.conf to /tmp/example.conf
       ansible.builtin.copy:
       src: example.conf

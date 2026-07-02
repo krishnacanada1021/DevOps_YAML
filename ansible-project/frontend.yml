@@ -6,7 +6,6 @@
         apt:
          name: nginx
          state: latest
-         become: yes
     
       - name: Copy Expense Nginx Configuration
         ansible.builtin.copy:

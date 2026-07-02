@@ -18,7 +18,7 @@
   hosts: localhost
   tasks:
     - name: Print uptime of my machine
-      command: uptime
+      shell: uptime
       register: uptime_output
     - name: Display uptime output
       debug:

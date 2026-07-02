@@ -4,7 +4,9 @@
   tasks:
       - name: Install Nginx
         apt:
-         name: nginx
+         name: 
+           - nginx
+           - unzip
          state: latest
     
       - name: Copy Expense Nginx Configuration

@@ -4,8 +4,8 @@
   tasks:
     - name: Install Nginx
       ansible.builtin.dnf:
-       name: nginx
-       state: latest
+      name: nginx
+      state: latest
     
     - name: Copy Expense Nginx Configuration
       ansible.builtin.copy:

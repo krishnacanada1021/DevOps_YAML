@@ -11,6 +11,12 @@
         state: latest
         update_cache: yes
 
+    - name: Install unzip
+      ansible.builtin.apt:
+        name: unzip
+        state: latest
+        update_cache: yes
+
     - name: Copy Expense Nginx Configuration
       ansible.builtin.copy:
         src: expense.conf
@@ -28,7 +34,7 @@
 
     - name: Download and Extract App Content
       ansible.builtin.unarchive:
-        src: "https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip"
+        src: "https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip"
         dest: "{{ app_loc }}"
         remote_src: yes
 

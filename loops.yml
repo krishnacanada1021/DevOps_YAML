@@ -1,0 +1,13 @@
+- name: this is loops example
+  hosts: localhost
+  tasks:
+    - name: Print Fruits
+      debug:
+        msg: "Fruit Name - {{ item }}"
+      loop:
+        - Apple
+        - Banana
+        - Cherry
+
+#Iteration of tasks until condition fails
+#loop

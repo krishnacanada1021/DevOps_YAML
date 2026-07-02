@@ -13,7 +13,7 @@
          dest: /etc/nginx/conf.d/expense.conf
 
       - name: clear the old content
-        ansible.builtin.file:
+        ansible.builtin.copy:
           content: ""
           dest: /usr/share/nginx/html
           state: absent

@@ -14,11 +14,8 @@
         URL_TASK: "This is my new text."
       debug:
         msg: "{{ URL_TASK }}"
-- name: Uptime of my machine
-  hosts: localhost
-  tasks:
-    - name: Print uptime of my machine
-      shell: uptime
+    - name: uptime timestamp registry
+      ansible.builtin.shell: uptime
       register: uptime_output
     - name: Display uptime output
       debug:
